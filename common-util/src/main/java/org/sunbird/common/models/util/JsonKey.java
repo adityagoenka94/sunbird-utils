@@ -28,6 +28,8 @@ public final class JsonKey {
   public static final String ACTIVE = "active";
   public static final String ACTOR_ID = "actorId";
   public static final String ACTOR_SERVICE = "Actor service";
+  public static final String OTP = "otp";
+  public static final String FRAMEWORK_METADATA = "frameworkMetadata";
   public static final String ACTOR_TYPE = "actorType";
   public static final String ADD_TYPE = "addType";
   public static final String ADDED_AT = "addedAt";

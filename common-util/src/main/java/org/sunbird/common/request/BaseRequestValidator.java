@@ -14,6 +14,7 @@ import org.sunbird.common.models.util.ProjectLogger;
 import org.sunbird.common.models.util.ProjectUtil;
 import org.sunbird.common.models.util.StringFormatter;
 import org.sunbird.common.responsecode.ResponseCode;
+import org.sunbird.common.models.util.EmailValidator;
 
 /**
  * Base request validator class to house common validation methods.
@@ -332,6 +333,24 @@ public class BaseRequestValidator {
           MessageFormat.format(
               ResponseCode.dataTypeError.getErrorMessage(), JsonKey.FILTERS, "Map"),
           ResponseCode.CLIENT_ERROR.getResponseCode());
+    }
+  }
+
+  public void validateEmail(String email) {
+    if (!EmailValidator.isEmailValid(email)) {
+      throw new ProjectCommonException(
+              ResponseCode.emailFormatError.getErrorCode(),
+              ResponseCode.emailFormatError.getErrorMessage(),
+              ResponseCode.CLIENT_ERROR.getResponseCode());
+    }
+  }
+
+  public void validatePhone(String phone) {
+    if (!ProjectUtil.validatePhone(phone, null)) {
+      throw new ProjectCommonException(
+              ResponseCode.phoneNoFormatError.getErrorCode(),
+              ResponseCode.phoneNoFormatError.getErrorMessage(),
+              ResponseCode.CLIENT_ERROR.getResponseCode());
     }
   }
 }
