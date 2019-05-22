@@ -782,6 +782,9 @@ public enum   ResponseCode {
   valueSyntaxError(
           CaminoResponseMessage.Key.VALUE_SYNTAX_ERROR,
           CaminoResponseMessage.Message.VALUE_SYNTAX_ERROR),
+  liveSessionAlreadyExists(
+          CaminoResponseMessage.Key.LIVE_SESSION_ALREADY_EXISTS,
+          CaminoResponseMessage.Message.LIVE_SESSION_ALREADY_EXISTS),
 
     // Stop
 
