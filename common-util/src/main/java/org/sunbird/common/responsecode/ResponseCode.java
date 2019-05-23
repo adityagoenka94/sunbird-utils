@@ -743,6 +743,44 @@ public enum ResponseCode {
       ResponseMessage.Key.ERROR_RATE_LIMIT_EXCEEDED,
       ResponseMessage.Message.ERROR_RATE_LIMIT_EXCEEDED),
 
+    // Start
+
+    // Cannot create a seprate file for this because in BaseController class,
+    // ResponseCode.getHeaderResponseCode(int code) function is used which validates the custom errors (thrown at runtime) and if not found in ResponseCode class,
+    // it throws Internal Server Error.
+
+    //Adding Custom Error created for MultiTenant Api's for Camino Instance
+
+  invalidHomeUrl(
+          CaminoResponseMessage.Key.INVALID_HOME_URL,
+          CaminoResponseMessage.Message.INVALID_HOME_URL),
+  homeUrlAlreadyExists(
+          CaminoResponseMessage.Key.HOME_URL_ALREADY_EXISTS,
+          CaminoResponseMessage.Message.HOME_URL_ALREADY_EXISTS),
+  invalidTenantPreferenceDetailId(
+          CaminoResponseMessage.Key.INVALID_TENANT_PREFERENCE_DETAIL_ID,
+          CaminoResponseMessage.Message.INVALID_TENANT_PREFERENCE_DETAIL_ID),
+  invalidTenantInfoId(
+          CaminoResponseMessage.Key.INVALID_TENANT_INFO_ID,
+          CaminoResponseMessage.Message.INVALID_TENANT_INFO_ID),
+  jsonDataFormatError(
+          CaminoResponseMessage.Key.JSON_DATA_FORMAT_ERROR,
+          CaminoResponseMessage.Message.JSON_DATA_FORMAT_ERROR),
+  valueSyntaxError(
+          CaminoResponseMessage.Key.VALUE_SYNTAX_ERROR,
+          CaminoResponseMessage.Message.VALUE_SYNTAX_ERROR),
+  liveSessionAlreadyExists(
+          CaminoResponseMessage.Key.LIVE_SESSION_ALREADY_EXISTS,
+          CaminoResponseMessage.Message.LIVE_SESSION_ALREADY_EXISTS),
+  multipleRootOrgsWithSameHomeUrl(
+          CaminoResponseMessage.Key.MULTIPLE_ROOT_ORGS,
+          CaminoResponseMessage.Message.MULTIPLE_ROOT_ORGS),
+  datePatternError(
+          CaminoResponseMessage.Key.DATE_PATTERN_ERROR,
+          CaminoResponseMessage.Message.DATE_PATTERN_ERROR),
+
+    // Stop
+
   OK(200),
   CLIENT_ERROR(400),
   SERVER_ERROR(500),
