@@ -785,6 +785,12 @@ public enum   ResponseCode {
   liveSessionAlreadyExists(
           CaminoResponseMessage.Key.LIVE_SESSION_ALREADY_EXISTS,
           CaminoResponseMessage.Message.LIVE_SESSION_ALREADY_EXISTS),
+  multipleRootOrgsWithSameHomeUrl(
+          CaminoResponseMessage.Key.MULTIPLE_ROOT_ORGS,
+          CaminoResponseMessage.Message.MULTIPLE_ROOT_ORGS),
+  datePatternError(
+          CaminoResponseMessage.Key.DATE_PATTERN_ERROR,
+          CaminoResponseMessage.Message.DATE_PATTERN_ERROR),
 
     // Stop
 

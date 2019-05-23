@@ -3,11 +3,10 @@ package org.sunbird.common.models.util;
 public enum CaminoActorOperations {
 
     // MULTI_TENANT_ACTOR_DEFINATIONS
-    CREATE_TENANT("createTenant"),
-    UPDATE_TENANT_INFO("updateTenantInfo"),
-    UPDATE_TENANT_PREFERENCE_DETAILS("updateTenantPreferenceDetails"),
-    GET_TENANT_INFO("getTenantInfo"),
-    ADD_TENANT_PREFERENCE_DETAILS("addTenantPreferenceDetails"),
+    CREATE_MULTI_TENANT_INFO("createMultiTenantInfo"),
+    UPDATE_MULTI_TENANT_INFO("updateMultiTenantInfo"),
+    GET_MULTI_TENANT_INFO("getMultiTenantInfo"),
+    DELETE_MULTI_TENANT_INFO("deleteMultiTenantInfo"),
 
     // BATCH_LIVESESSIONS_ACTOR_DEFINATIONS
     CREATE_BATCH_LIVESESSIONS("createBatchLiveSessions"),

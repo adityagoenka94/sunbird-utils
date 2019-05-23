@@ -16,12 +16,25 @@ public class LiveSession implements Serializable {
     private String unitId;
     private String contentId;
     private String liveSessionUrl;
+    private String liveSessionId;
     private String startTime;
     private String endTime;
     private String createdBy;
     private String createdDate;
     private String updatedDate;
-    private String status;
+    private int status;
+
+    public LiveSession() {
+
+    }
+
+    public String getLiveSessionId() {
+        return liveSessionId;
+    }
+
+    public void setLiveSessionId(String liveSessionId) {
+        this.liveSessionId = liveSessionId;
+    }
 
     public String getId() {
         return id;
@@ -111,11 +124,11 @@ public class LiveSession implements Serializable {
         this.updatedDate = updatedDate;
     }
 
-    public String getStatus() {
+    public int getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(int status) {
         this.status = status;
     }
 }
