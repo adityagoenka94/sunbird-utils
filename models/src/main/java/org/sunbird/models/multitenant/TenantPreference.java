@@ -8,7 +8,7 @@ import java.io.Serializable;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_NULL)
 
-public class MultiTenant implements Serializable {
+public class TenantPreference implements Serializable {
 
     private static final long serialVersionUID = 1L;
     private String id;
@@ -18,9 +18,9 @@ public class MultiTenant implements Serializable {
     private String hashTagId;
     private String externalId;
     private String imgUrl;
-    private Boolean isRootOrg;
+    private boolean isRootOrg;
     private String rootOrgId;
-    private String multiTenantId;
+    private String tenantInfoId;
     private String orgName;
     private String framework;
     private String preferenceDetails;
@@ -36,16 +36,16 @@ public class MultiTenant implements Serializable {
     private int status;
 
 
-    public MultiTenant(){
+    public TenantPreference(){
 
     }
 
-    public String getMultiTenantId() {
-        return multiTenantId;
+    public String getTenantInfoId() {
+        return tenantInfoId;
     }
 
-    public void setMultiTenantId(String multiTenantId) {
-        this.multiTenantId = multiTenantId;
+    public void setTenantInfoId(String tenantInfoId) {
+        this.tenantInfoId = tenantInfoId;
     }
 
     public String getCreatedBy() {
@@ -144,12 +144,12 @@ public class MultiTenant implements Serializable {
         this.imgUrl = imgUrl;
     }
 
-    public Boolean getRootOrg() {
+    public boolean getIsRootOrg() {
         return isRootOrg;
     }
 
-    public void setRootOrg(Boolean rootOrg) {
-        isRootOrg = rootOrg;
+    public void setIsRootOrg(boolean isRootOrg) {
+        this.isRootOrg = isRootOrg;
     }
 
     public String getRootOrgId() {
